@@ -32,5 +32,11 @@ internal class Program
         orderService.OrderBookOnline(user1, books[0]);
         orderService.ProcessingOrder(books[0]);
 
+        staffNotificationService.Unsubscribe(staff2);
+        staffNotificationService.SendNotification("Andrei left our team!");
+
+        orderService.OrderBookOnline(user2, books[3]);
+        orderService.ProcessingOrder(books[3]);
+
     }
 }
